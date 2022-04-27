@@ -1,0 +1,120 @@
+/* 1224 */
+
+@media screen and (max-width: 1300px) {
+  .open__window {
+    width: 900px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .open__window {
+    width: 700px;
+  }
+  .window__first {
+    flex-direction: column;
+    align-items: center;
+  }
+  .window__first__div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .window__platforms {
+    margin-top: 2rem;
+    display: block;
+  }
+
+  /* BURGER */
+  .burger {
+    position: absolute;
+    width: 60px;
+    aspect-ratio: 1;
+    top: 0rem;
+    right: -2rem;
+    pointer-events: all;
+  }
+  .burger__div {
+    transition-duration: 0.5s;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    top: 30px;
+    background: #fff;
+    pointer-events: none;
+  }
+  .burger__div::before {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    content: "";
+    top: -10px;
+  }
+  .burger__div::after {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    content: "";
+    top: 10px;
+  }
+
+  .burger.open .burger__div {
+    transition-duration: 0.5s;
+    background: transparent;
+  }
+  .burger.open .burger__div:before {
+    transform: rotateZ(45deg) scaleX(1.25) translate(4px, 4px);
+  }
+  .burger.open .burger__div:after {
+    transform: rotateZ(-45deg) scaleX(1.25) translate(8px, -8px);
+  }
+
+  .nav__ul li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    margin-right: 0;
+    margin-top: 1rem;
+  }
+  .nav__ul {
+    display: none;
+    transform: translateY(-100%);
+    height: 0;
+  }
+  .nav__ul.open {
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    opacity: 1;
+    transform: translateY(0%);
+    height: 100%;
+  }
+  .popular__games.open {
+    padding-top: 8rem;
+  }
+  .nav__col--2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  .nav__search--div.open {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 770px) {
+  .open__window {
+    width: 95%;
+    height: 95vh;
+  }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Style -->
+    <link rel="stylesheet" href="./style/style.css" />
+    <!-- QUERY -->
+    <link rel="stylesheet" href="./style/query.css" />
+    <title>Games app</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__col--1">
+        <h1>Games App</h1>
+      </div>
+      <div class="burger">
+        <div class="burger__div"></div>
+      </div>
+      <div class="nav__col--2">
+        <ul class="nav__ul">
+          <li><a href="#popular__games">Popular Games</a></li>
+          <li><a href="#upcoming__games">Upcoming Games</a></li>
+          <li><a href="#new__games">New Games</a></li>
+        </ul>
+        <form class="nav__search--div">
+          <input class="nav__input" type="text" />
+          <button class="nav__search">
+            <img src="./src/img/search--icon.svg" alt="" />
+          </button>
+        </form>
+      </div>
+    </nav>
+    <main>
+      <div class="searched__games">
+        <h1 class="games__h1 hidden">Searched Games</h1>
+
+        <div class="search__games--div games"></div>
+      </div>
+      <div id="popular__games" class="popular__games games__div">
+        <h1 class="games__h1">Popular Games</h1>
+        <div class="popular__games--div games">
+          <!-- 
+          <div class="game__div">
+            <h1 class="game__name">Cyberpunk 2088</h1>
+            <p class="release__date">2020-05-26</p>
+            <img class="game__image" src="./src/img/slika.jpg" alt="" />
+          </div>
+        --></div>
+      </div>
+      <div id="upcoming__games" class="upcoming__games games__div">
+        <h1 class="games__h1">Upcoming Games</h1>
+        <div class="upcoming__games--div games"></div>
+      </div>
+      <div id="new__games" class="new__games games__div">
+        <h1 class="games__h1">New Games</h1>
+        <div class="new__games--div games"></div>
+      </div>
+
+      <!-- NEW WINDOW -->
+      <div class="open__window hidden">
+        <!-- <div class="window__div">
+          <div class="window__first">
+            <div>
+              <h1 class="window__game--name">Name of the game</h1>
+              <div class="window__rating">
+                <p>Ratings:</p>
+                <img src="./src/img/platforms/star-full.png" alt="" />
+                <img src="./src/img/platforms/star-full.png" alt="" />
+                <img src="./src/img/platforms/star-full.png" alt="" />
+                <img src="./src/img/platforms/star-full.png" alt="" />
+                <img src="./src/img/platforms/star-full.png" alt="" />
+              </div>
+            </div>
+            <div class="window__platforms">
+              <h1>Platforms</h1>
+              <img src="./src/img/platforms/playstation.svg" alt="" />
+              <img src="./src/img/platforms/nintendo.svg" alt="" />
+              <img src="./src/img/platforms/nintendo.svg" alt="" />
+            </div>
+          </div>
+          <img src="./src/img/slika.jpg" alt="" class="window__main--image" />
+          <p class="window__description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+            quibusdam beatae id qui ab magni odit impedit assumenda fuga sit
+            earum odio laboriosam ipsum a aspernatur cum eveniet, molestias
+            repellendus. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Iste doloribus vitae dicta nesciunt id blanditiis illo autem
+            neque iure ratione expedita, facere, provident optio hic, veniam
+            debitis ex perferendis magnam! repellendus. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Iste doloribus vitae dicta
+            nesciunt id blanditiis illo autem neque iure ratione expedita,
+            facere, provident optio hic, veniam debitis ex perferendis magnam!
+          </p>
+          <div class="window__screenshots">
+            <img src="./src/img/slika.jpg" alt="" />
+            <img src="./src/img/slika.jpg" alt="" />
+            <img src="./src/img/slika.jpg" alt="" />
+          </div>
+        </div> -->
+      </div>
+      <div class="overlay hidden"></div>
+    </main>
+    <!-- JS -->
+    <script type="module" src="./src/js/app.js"></script>
+  </body>
+</html>

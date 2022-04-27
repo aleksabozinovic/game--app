@@ -1,0 +1,365 @@
+:root {
+  --background-color: #242224;
+  --nav--text: #f2f2f2;
+  --orange-color: #ff7676;
+  --overlay-color: #000000cc;
+  --p--color: rgb(235, 235, 235);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p {
+  color: var(--p--color);
+}
+
+a,
+li {
+  list-style-type: none;
+  text-decoration: none;
+  color: var(--nav--text);
+}
+svg,
+i {
+  pointer-events: none;
+}
+body {
+  height: 100vh;
+  background: var(--background-color);
+  margin: 0 4rem;
+  width: auto;
+  font-family: "Courier New", Courier, monospace;
+}
+
+nav {
+  height: 8vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.nav__col--1 h1 {
+  font-size: 1.5rem;
+  color: var(--nav--text);
+}
+.nav__ul {
+  display: flex;
+  align-items: center;
+  transition: all 1s ease;
+}
+.nav__ul li {
+  margin-right: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.nav__col--2 {
+  display: flex;
+}
+.nav__search--div {
+  position: relative;
+  display: flex;
+  height: 1.3rem;
+}
+.nav__input {
+  padding: 0.2rem;
+  border-radius: 5px;
+  border: none;
+}
+.nav__search {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  border-left: 1px solid var(--background-color);
+}
+.nav__search img {
+  width: 90%;
+}
+
+.games__h1 {
+  font-size: 46px;
+  margin-bottom: 1.5rem;
+  color: var(--orange-color);
+  font-weight: 800;
+  border-bottom: 1px solid var(--orange-color);
+}
+.popular__games,
+.upcoming__games,
+.new__games {
+  padding: 1rem 0;
+  transition: all 0.5s ease;
+}
+.games {
+  color: var(--nav--text);
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+}
+.game__image {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  transition: all 0.5s ease;
+}
+.game__image.over:hover {
+  bottom: 0;
+  opacity: 0.5;
+  height: 100%;
+}
+
+.game__name {
+  margin: 1rem 0rem;
+  transition: all 0.5s ease;
+}
+.release__date {
+  font-size: 1.1rem;
+  margin: 1rem 0rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 60%;
+  transition: all 0.5s ease;
+}
+
+.game__div {
+  min-width: 100%;
+  position: relative;
+  min-height: 40vh;
+  max-height: 50vh;
+  box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border-radius: 3%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Open WINDOW */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: var(--overlay-color);
+  left: 0;
+  top: 0;
+  z-index: 100;
+  opacity: 1;
+  pointer-events: all;
+}
+.overlay.hidden,
+.open__window.hidden {
+  pointer-events: none;
+  opacity: 0;
+}
+.open__window {
+  transition: all 0.3s ease;
+  position: fixed;
+  width: 1200px;
+  height: 800px;
+  background: var(--background-color);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 101;
+  opacity: 1;
+  pointer-events: all;
+  overflow-y: scroll;
+}
+.open__window p {
+  font-size: 18px;
+}
+.window__rating {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.window__rating p {
+  margin-right: 1rem;
+}
+.window__rating img {
+  margin-top: 0.2rem;
+}
+.window__div {
+  width: 90%;
+  margin: 3rem auto;
+  color: var(--nav--text);
+}
+
+.window__platforms {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.window__platforms h1 {
+  margin-bottom: 1rem;
+}
+.window__platforms img {
+  height: 70%;
+  margin-right: 0.5rem;
+}
+.window__first {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.window__main--image {
+  width: 80%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 60vh;
+  object-fit: cover;
+}
+
+.window__description,
+.window__description--next {
+  width: 80%;
+  margin: 3rem auto;
+  text-align: center;
+  display: flex;
+  flex: 1;
+}
+.window__screenshots {
+  display: grid;
+  width: 80%;
+  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-content: center;
+  gap: 1.5rem;
+}
+.window__screenshots img {
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+}
+.window__tags,
+.window__score,
+.window__genre,
+.window__date {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.window__tags p,
+.window__score p,
+.window__genre p,
+.window__date p {
+  margin-top: 1rem;
+}
+.window__score p {
+  position: relative;
+  padding: 0.2rem;
+  text-align: center;
+  border: 2px solid var(--orange-color);
+  font-weight: 600;
+}
+.iks {
+  position: fixed;
+  width: 30px;
+  top: 2rem;
+  right: 2rem;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  opacity: 1;
+}
+.iks::before,
+.iks::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px; /* cross thickness */
+  background-color: #fff;
+}
+.iks::before {
+  transform: rotate(45deg);
+}
+
+.iks::after {
+  transform: rotate(-45deg);
+}
+.open__window::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.open__window::-webkit-scrollbar-thumb {
+  background-color: var(--orange-color);
+}
+
+.open__window::-webkit-scrollbar-track {
+  background: white;
+}
+
+.game__description {
+  width: 80%;
+  margin: auto;
+  margin-top: 2rem;
+  text-align: justify;
+}
+.game__description p {
+  line-height: 1.2rem;
+}
+.game__description h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.games__h1.hidden {
+  display: none;
+}
+
+/* EFFECTS */
+.game__div:hover .game__name {
+  transform: translateY(90px);
+  pointer-events: none;
+}
+.game__div:hover .release__date {
+  transform: translate(-50%, 90px);
+  pointer-events: none;
+}
+.game__div:hover .game__image {
+  bottom: 0;
+  opacity: 0.1;
+  height: 100%;
+  pointer-events: none;
+}
+.spinner {
+  margin: 5rem auto;
+  text-align: center;
+}
+.spinner svg {
+  height: 6rem;
+  width: 6rem;
+  fill: var(--orange-color);
+  animation: rotate 2s infinite linear;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
