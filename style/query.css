@@ -9,6 +9,9 @@
   .open__window {
     width: 700px;
   }
+  .nav__col--1 {
+    opacity: 0;
+  }
   .window__first {
     flex-direction: column;
     align-items: center;
@@ -116,5 +119,38 @@
   .open__window {
     width: 95%;
     height: 95vh;
+  }
+  .window__description,
+  .window__description--next {
+    flex-direction: column;
+  }
+  .window__tags,
+  .window__genre {
+    margin-bottom: 2rem;
+  }
+  .window__tags p,
+  .window__score p,
+  .window__genre p,
+  .window__date p {
+    margin-top: 0rem;
+  }
+
+  .games__h1 {
+    text-align: center;
+    font-size: 38px;
+  }
+  .game__name {
+    font-size: 26px;
+  }
+  .release__date {
+    font-size: 0.9rem;
+  }
+  body {
+    margin: 0 2rem;
+  }
+}
+@media screen and (max-width: 470px) {
+  body {
+    margin: 0 1rem;
   }
 }
