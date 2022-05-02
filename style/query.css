@@ -9,6 +9,10 @@
   .open__window {
     width: 700px;
   }
+  .window__game--name {
+    width: 100%;
+    text-align: center;
+  }
   .nav__col--1 {
     opacity: 0;
   }
@@ -29,18 +33,18 @@
   /* BURGER */
   .burger {
     position: absolute;
-    width: 60px;
-    aspect-ratio: 1;
-    top: 0rem;
-    right: -2rem;
+    width: 30px;
+    height: 30px;
+    top: 2rem;
+    right: 0rem;
     pointer-events: all;
+    z-index: 10;
   }
   .burger__div {
     transition-duration: 0.5s;
     position: absolute;
     height: 4px;
     width: 30px;
-    top: 30px;
     background: #fff;
     pointer-events: none;
   }
@@ -97,6 +101,7 @@
     opacity: 1;
     transform: translateY(0%);
     height: 100%;
+    width: 100%;
   }
   .popular__games.open {
     padding-top: 8rem;
@@ -110,9 +115,9 @@
   }
   .nav__search--div.open {
     position: absolute;
-    left: 50%;
+
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(0%, -50%);
   }
 }
 @media screen and (max-width: 770px) {
@@ -152,5 +157,22 @@
 @media screen and (max-width: 470px) {
   body {
     margin: 0 1rem;
+  }
+  .games {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .window__screenshots img {
+    width: 80%;
+  }
+  .game__description {
+    width: 100%;
+
+    margin: 0;
+  }
+}
+@media screen and (max-width: 350px) {
+  .window__screenshots img {
+    width: 60%;
   }
 }

@@ -105,6 +105,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 3rem;
+  justify-content: center;
 }
 .game__image {
   width: 100%;
@@ -219,12 +220,11 @@ nav {
 }
 
 .window__main--image {
-  width: 80%;
+  width: 100%;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  height: 60vh;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .window__description,
@@ -237,16 +237,14 @@ nav {
 }
 .window__screenshots {
   display: grid;
-  width: 80%;
-  margin: auto;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-items: center;
   justify-content: center;
   gap: 1.5rem;
 }
 .window__screenshots img {
   width: 100%;
-  height: 25vh;
-  object-fit: cover;
+  object-fit: contain;
 }
 .window__tags,
 .window__score,
@@ -315,7 +313,7 @@ nav {
   width: 80%;
   margin: auto;
   margin-top: 2rem;
-  text-align: justify;
+  text-align: center;
 }
 .game__description p {
   line-height: 1.2rem;
